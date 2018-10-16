@@ -28,6 +28,7 @@ public class CustomAdapter extends ArrayAdapter<DataItem> {
     private Context context;
     private int layoutResourceId;
     private List<DataItem> data;
+    private String something;
 
     public CustomAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<DataItem> objects) {
         super(context, resource, objects);
