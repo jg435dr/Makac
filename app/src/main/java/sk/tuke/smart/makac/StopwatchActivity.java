@@ -44,6 +44,7 @@ public class StopwatchActivity extends MenuActivity {
     private BroadcastReceiver receiver;
     private boolean state;
     private int tempSelectSport;
+    private String neviemco;
 
 
     @Override
