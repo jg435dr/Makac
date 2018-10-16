@@ -32,6 +32,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private List<List<Location>> finalPositionList;
     private LatLng firstLocation;
     private LatLngBounds.Builder builder;
+    private String something;
 
     private static final CharSequence[] MAP_TYPE_ITEMS =
             {"Road Map", "Hybrid", "Satellite", "Terrain"};
