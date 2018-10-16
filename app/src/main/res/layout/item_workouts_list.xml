@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/workouts_list_endTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/workouts_list_image_sport"
+        android:text="@string/activity_date"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/duration_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/workouts_list_endTime"
+        android:layout_marginRight="10dp"
+        android:layout_toEndOf="@+id/workouts_list_image_sport">
+
+        <TextView
+            android:id="@+id/workouts_list_duration_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/workouts_list_duration"
+            android:layout_marginStart="5dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="3dp"
+            android:paddingTop="3dp"
+            android:text="@string/zero_time"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/workouts_list_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:paddingRight="3dp"
+            android:paddingTop="3dp"
+            android:text="@string/duration"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/distance_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/workouts_list_endTime"
+        android:layout_marginRight="10dp"
+        android:layout_toEndOf="@+id/duration_relative">
+
+        <TextView
+            android:id="@+id/workouts_list_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="3dp"
+            android:text="@string/distance"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/workouts_list_distance_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/workouts_list_distance"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="3dp"
+            android:paddingTop="3dp"
+            android:text="@string/zero"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/speed_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/distance_relative"
+        android:layout_below="@+id/workouts_list_endTime">
+
+        <TextView
+            android:id="@+id/workouts_list_avg_speed_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/workouts_list_avg_speed"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="3dp"
+            android:paddingTop="3dp"
+            android:text="@string/zero"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/workouts_list_avg_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="3dp"
+            android:text="@string/avg_pace"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/workouts_list_image_sport"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:src="@drawable/image_walking" />
+</RelativeLayout>

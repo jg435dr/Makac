@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Makac</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="duration">Duration</string>
+    <string name="zero_time" translatable="false">00:00:00</string>
+    <string name="distance">Distance</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="kilometres" translatable="false">km</string>
+    <string name="kiloperhour" translatable="false">km/h</string>
+    <string name="pace">Pace</string>
+    <string name="calories">Calories</string>
+    <string name="start_calories" translatable="false">000</string>
+    <string name="calories_unit" translatable="false">kcal</string>
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name="running">Running</string>
+    <string name="sport">SPORT</string>
+    <string name="activity_date" translatable="false">Apr 24, 2017 6:10:52 PM</string>
+    <string name="summary">Summary</string>
+    <string name="social_share">Social share</string>
+    <string name="show_map">Show Map</string>
+    <string name="stopwatch_stop">Stop</string>
+    <string name="stopwatch_continue">Continue</string>
+    <string name="walking">Walking</string>
+    <string name="cycling">Cycling</string>
+    <string name="avg_pace">Avg. Pace</string>
+    <string name="metres" translatable="false">m</string>
+    <string name="write">Write message</string>
+    <string name="login_text">Login</string>
+    <string name="password_text">Password</string>
+    <string name="confirm_the_password">Confirm the password</string>
+    <string name="weight_text">Weight</string>
+    <string name="age_text">Age</string>
+    <string name="login_welcome">LOG IN</string>
+    <string name="no_account_yet">No account yet? Create one!</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_member">Already a member? Log In!</string>
+
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="stopwatch">Stopwatch</string>
+    <string name="username">Username</string>
+    <string name="update_values">UPDATE VALUES</string>
+    <string name="my_workouts">My Workouts</string>
+    <string name="user_profile">User Profile</string>
+    <string name="log_out">Log out</string>
+    <string name="log_in">Log in</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <string name="write_login">Write Login!</string>
+    <string name="write_password">Write password!</string>
+    <string name="repeat_password_again">Repeat password again!</string>
+    <string name="write_weight">Write weight!</string>
+    <string name="write_age">Write age!</string>
+    <string name="login_already_exist">Login already exist!</string>
+    <string name="select_map_type">Select Map Type</string>
+    <string name="delete_workout">Delete Workout</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="success">Success</string>
+    <string name="failure">Failure</string>
+    <string name="end_actual_workout">End Actual Workout</string>
+    <string name="reset_counters">Do you really want end workout and reset counters?</string>
+    <string name="wrong_password">Wrong password!</string>
+    <string name="my_workout">My Workout</string>
+    <string name="no_data">No data available</string>
+    <string name="i_was_out_for">"I was out for "</string>
+    <string name="i_tracked">". I tracked "</string>
+    <string name="in">" in "</string>
+    <string name="unk">Unknown</string>
+    <string name="list_of_workouts">List of Workouts</string>
+    <string name="update_account">Update Account</string>
+    <string name="want_log_out">Do you really want log out?</string>
+    <string name="update_success">Update success</string>
+    <string name="update_failure">Update failure</string>
+    <string name="show_places">Show Places</string>
+
+    <string name="google_place_api">AIzaSyCWtrqdgQ8kBsta2nszyQR7dj3-nqdi6Gg</string>
+</resources>

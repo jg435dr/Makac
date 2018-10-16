@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview_stopwatch_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:fillViewport="true"
+    tools:context="sk.tuke.smart.makac.StopwatchActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_stopwatch"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/holo_orange_dark"/>
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_stopwatch"
+            android:paddingBottom="20dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:paddingTop="50dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                app:srcCompat="@drawable/stopwatch" />
+
+            <Button
+                android:id="@+id/button_stopwatch_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/button_style"
+                android:text="@string/start"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button_stopwatch_endworkout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/button_stopwatch_start"
+                android:layout_below="@+id/button_stopwatch_start"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_style"
+                android:text="@string/end"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button_stopwatch_selectsport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/button_stopwatch_start"
+                android:background="@drawable/button_style"
+                android:onClick="selectSport"
+                android:text="@string/running"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/relative_layout"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:id="@+id/textview_stopwatch_labelduration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/duration"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textview_stopwatch_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview_stopwatch_labelduration"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:text="@string/zero_time"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textview_stopwatch_labeldistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/distance"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textview_stopwatch_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview_stopwatch_labeldistance"
+                android:layout_toStartOf="@+id/textview_stopwatch_distanceunit"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:text="@string/zero"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textview_stopwatch_distanceunit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/textview_stopwatch_labeldistance"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="@string/kilometres"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textview_stopwatch_labelpace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview_stopwatch_distance"
+                android:layout_marginTop="15dp"
+                android:text="@string/pace"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textview_stopwatch_pace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textview_stopwatch_unitpace"
+                android:layout_alignBottom="@+id/textview_stopwatch_unitpace"
+                android:layout_alignParentStart="true"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:text="@string/zero"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textview_stopwatch_unitpace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview_stopwatch_labelpace"
+                android:layout_toEndOf="@+id/textview_stopwatch_pace"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:text="@string/kiloperhour"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textview_stopwatch_labelcalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/textview_stopwatch_distanceunit"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="@string/calories"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textview_stopwatch_calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview_stopwatch_labelcalories"
+                android:layout_toStartOf="@+id/textview_stopwatch_unitcalories"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:text="@string/start_calories"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textview_stopwatch_unitcalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/textview_stopwatch_labelcalories"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="@string/calories_unit"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
